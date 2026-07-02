@@ -38,12 +38,19 @@ This project builds an end-to-end Uber Ride Analytics platform using Azure servi
 - GitHub
 
 ## Pipeline
+
+
+## ADF- HTTP to ADLS
 ![ADF- HTTP to ADLS](Images/adf_http_to_adls_pipeline.png)
 This pipeline uses a Lookup activity to retrieve a list of source files and a ForEach loop to ingest data from HTTP endpoints into Azure Data Lake Storage Gen2 (ADLS). It enables automated and scalable batch ingestion of source datasets.
 
+
+## Streaming Table
 ![Streaming Table](Images/bulk_and_realtime_rides_flow.png)
 Databricks streaming tables process real-time ride events from the rides_raw source and continuously load them into the streaming_rides table, providing a near real-time data ingestion framework.
 
+
+##End to End Pipeline
 ![End to End Pipeline](Images/ETE_pipeline.png)
 The complete data transformation flow from raw ride data to analytics-ready datasets. Data moves through staging and Silver layers to create an Operational Business Table (OBT), which is then transformed into Gold-layer Fact and Dimension tables following a Star Schema design for reporting and analytics.
 
