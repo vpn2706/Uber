@@ -4,28 +4,6 @@
 
 This project builds an end-to-end Uber Ride Analytics platform using Azure services and Databricks. The solution processes both streaming and batch ride data, applies Medallion Architecture (Bronze → Silver → Gold), and delivers analytics-ready dimensional models for reporting.
 
-## Architecture
-Web App
-   │
-   ▼
-Azure Event Hub
-   │
-   ▼
-Azure Databricks (Streaming)
-   │
-   ▼
-Silver OBT Layer
-   │
-   ▼
-Gold Layer
-├── Dim Booking
-├── Dim Driver
-├── Dim Passenger
-├── Dim Vehicle
-├── Dim Payment
-├── Dim Location
-└── Fact Table
-
 
 ## Data Flow
 
